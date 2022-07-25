@@ -15,7 +15,11 @@ interface Book {
 }
 
 function App() {
-  const { data: { books = [] } = {} } = useQuery(FETCH_BOOKS);
+  const {
+    data: {
+      books = []
+    } = {}
+  } = useQuery(FETCH_BOOKS);
 
   return (
     <div>
