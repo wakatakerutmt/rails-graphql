@@ -4,6 +4,7 @@ module Types
     field :create_book, mutation: Mutations::CreateBook
     field :update_book, mutation: Mutations::UpdateBook
     field :delete_book, mutation: Mutations::DeleteBook
+    field :ddd_book, mutation: Mutations::DddBook
 
     # TODO: remove me
     field :test_field, String, null: false,
