@@ -1,0 +1,30 @@
+query books {
+  books {
+    id
+    title
+  }
+}
+
+mutation createBook($params: BookAttributes!) {
+  createBook(input: { params: $params }) {
+    book {
+      id
+      title
+    }
+  }
+}
+
+mutation deleteBook($id: ID!) {
+  deleteBook(input: { id: $id }) {
+    id
+  }
+}
+
+mutation updateBook($id: ID!, $params: BookAttributes!) {
+  updateBook(input: { id: $id, params: $params }) {
+    book {
+      id
+      title
+    }
+  }
+}

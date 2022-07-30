@@ -10,10 +10,10 @@ module Types
     field :book, resolver: Queries::Book # 追加
 
     # TODO: remove me
-    field :test_field, String, null: false,
+    field :test_field, resolver: Queries::Books,
       description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
-    end
+    # def test_field
+    #   "Hello World!"
+    # end
   end
 end

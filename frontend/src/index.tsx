@@ -15,10 +15,15 @@ const link = createHttpLink({
   credentials: "include",
 });
 
+const cache = new InMemoryCache(); 
+
+// Apolloクライアントの作成
 const client = new ApolloClient({
-  cache: new InMemoryCache(),
-  link: link,
+  cache: cache, // キャッシュの設定
+  link: link, // HTTP通信先の設定
+  resolvers: {},
 });
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

@@ -1,4 +1,4 @@
-import { useBooksQuery, useCreateBookMutation, useDeleteBookMutation, useUpdateBookMutation } from "./graphql/generated";
+import { useBooksQuery, useCreateBookMutation, useDeleteBookMutation, useUpdateBookMutation } from "./__generated__/graphql";
 import { useState } from "react";
 
 function App() {

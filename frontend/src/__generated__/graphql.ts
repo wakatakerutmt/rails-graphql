@@ -76,7 +76,7 @@ export type DeleteBookPayload = {
 export type Mutation = {
   __typename?: 'Mutation';
   createBook?: Maybe<CreateBookPayload>;
-  ddd?: Maybe<DddBookPayload>;
+  dddBook?: Maybe<DddBookPayload>;
   deleteBook?: Maybe<DeleteBookPayload>;
   /** An example field added by the generator */
   testField: Scalars['String'];
@@ -89,7 +89,7 @@ export type MutationCreateBookArgs = {
 };
 
 
-export type MutationDddArgs = {
+export type MutationDddBookArgs = {
   input: DddBookInput;
 };
 
@@ -108,7 +108,7 @@ export type Query = {
   book: Book;
   books: Array<Book>;
   /** An example field added by the generator */
-  testField: Scalars['String'];
+  testField: Array<Book>;
 };
 
 
